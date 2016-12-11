@@ -1,0 +1,23 @@
+﻿@model TodoRepository.TodoItem
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marked done </title>
+    <style>
+        h2 {
+            font-size: 12px;
+          }
+    </style>
+</head>
+<body>
+@if (Model != null)
+{
+    Model.MarkAsCompleted();
+    <h1>The todo was marked completed</h1>
+    <br/>
+    <h2>Text: @Model.Text</h2>
+    <br/>
+}
+<a asp-action="Index" asp-controller="Todo" >return</a>
+</body>
+</html>

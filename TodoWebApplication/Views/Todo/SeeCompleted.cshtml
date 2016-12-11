@@ -1,0 +1,26 @@
+﻿@model List<TodoRepository.TodoItem>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Completed todos </title>
+    <style>
+        h2 {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Completed todos</h1>
+    <div>
+        @if (Model != null)
+        {
+            foreach (var todo in Model)
+            {
+                <h2>@todo.Text <br /> @todo.DateCreated <br /></h2>
+            }
+        }
+    </div>
+    <a asp-action="Index" asp-controller="Todo">return</a>
+</body>
+</html>

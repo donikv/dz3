@@ -1,0 +1,16 @@
+﻿@model TodoRepository.TodoText
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add todo </title>
+</head>
+<body>
+<h1>Add new todo</h1>
+    <form asp-action="Add" method="post">
+    Text: <input asp-for="Text"/> <span asp-validation-for="Text"></span> <br/>
+    <input type="submit"/>
+</form>
+
+</body>
+</html>
